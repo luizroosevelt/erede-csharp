@@ -6,6 +6,7 @@
         <Version>1.0.0</Version>
         <Authors>Forsh</Authors>
         <Product>Forsh</Product>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
     <ItemGroup>
