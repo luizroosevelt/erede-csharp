@@ -3,10 +3,14 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
         <PackageId>Forsh.eRede</PackageId>
-        <Version>1.0.0</Version>
-        <Authors>Forsh</Authors>
-        <Product>Forsh</Product>
+        <Version>1.0.1</Version>
+        <Authors>Luiz Roosevelt</Authors>
+        <Product>eRede</Product>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Description>Client de conexão da adquirente Rede.</Description>
+        <Company>Forsh Commerce</Company>
+        <PackageReleaseNotes>1.0.0 - Versão inicial
+1.0.1 - Correção para preenchimento do Installments.</PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>

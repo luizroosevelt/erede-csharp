@@ -88,9 +88,9 @@ namespace eRede
 
         public Transaction CreditCard(string cardNumber, string securityCode, string expirationMonth,
             string expirationYear,
-            string cardHolderName, bool capture = true)
+            string cardHolderName, int installments, bool capture = true)
         {
-            SetCard(cardNumber, securityCode, expirationMonth, expirationYear, cardHolderName, CREDIT);
+            SetCard(cardNumber, securityCode, expirationMonth, expirationYear, cardHolderName, CREDIT, installments);
 
             this.capture = capture;
 
@@ -101,7 +101,7 @@ namespace eRede
             string expirationYear,
             string cardHolderName)
         {
-            SetCard(cardNumber, securityCode, expirationMonth, expirationYear, cardHolderName, DEBIT);
+            SetCard(cardNumber, securityCode, expirationMonth, expirationYear, cardHolderName, DEBIT, 1);
 
             capture = true;
             threeDSecure = new ThreeDSecure
@@ -116,7 +116,7 @@ namespace eRede
 
         private void SetCard(string cardNumber, string securityCode, string expirationMonth,
             string expirationYear,
-            string cardHolderName, string kind)
+            string cardHolderName, string kind, int installments)
         {
             this.cardNumber = cardNumber;
             this.securityCode = securityCode;
@@ -124,6 +124,7 @@ namespace eRede
             this.expirationYear = expirationYear;
             this.cardHolderName = cardHolderName;
             this.kind = kind;
+            this.installments = installments;
         }
     }
 }
